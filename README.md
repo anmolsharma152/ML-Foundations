@@ -2,6 +2,14 @@
 
 The core repository for classical machine learning algorithms, statistical modeling, and production-grade data pipelines.
 
+## Docs
+
+| Doc | Purpose |
+|-----|---------|
+| **[docs/STATUS.md](./docs/STATUS.md)** | Handoff status |
+| [docs/setup.md](./docs/setup.md) | Local env |
+| [AGENTS.md](./AGENTS.md) | Agent guidance |
+
 ## Overview
 
 While Deep Learning and GenAI handle unstructured data (text, images), classical Machine Learning remains the undisputed industry standard for tabular data, risk modeling, and structured prediction tasks.
