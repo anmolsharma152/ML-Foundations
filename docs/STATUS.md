@@ -2,9 +2,9 @@
 
 | Field | Value |
 |-------|--------|
-| **As of** | 2026-07-19 |
+| **As of** | 2026-10-24 |
 | **Branch** | `main` |
-| **Product** | Classical ML archive + production-oriented sklearn / tabular ML lab |
+| **Product** | Coursework and study notebooks (IIT Mandi DS&AI) |
 
 ---
 
@@ -12,8 +12,8 @@
 
 | Piece | Notes |
 |-------|--------|
-| Root README | Vision + roadmap (PCA, SVM, RF, regression; Optuna/XGB/SHAP planned) |
-| Implementations | Sparse / early — treat as scaffold for classical ML work |
+| Root README | Index of the notebook folders |
+| Notebooks | 39 notebooks in `01-`…`07-` topic folders and `assignments/` |
 
 Related: `frontier-llmops-core` (LLMOps track), Sarvam fine-tune (indic LLM) — different scope.
 

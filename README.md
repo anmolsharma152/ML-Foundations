@@ -1,40 +1,30 @@
 # ML-Foundations
 
-The core repository for classical machine learning algorithms, statistical modeling, and production-grade data pipelines.
+Notebooks from my Data Science and AI coursework at IIT Mandi and my own study, covering exploratory analysis and classical ML through neural networks, computer vision, generative models, transformers and reinforcement learning.
 
-## Docs
+Most notebooks were written for Google Colab and keep their outputs, so you can read results on GitHub without running anything.
 
-| Doc | Purpose |
-|-----|---------|
-| **[docs/STATUS.md](./docs/STATUS.md)** | Handoff status |
-| [docs/setup.md](./docs/setup.md) | Local env |
-| [AGENTS.md](./AGENTS.md) | Agent guidance |
+## Contents
 
-## Overview
+| Folder | What's inside |
+|---|---|
+| [`01-python-and-eda`](01-python-and-eda) | NumPy basics and exploratory analysis: Diwali sales, taco sales and two EDA case studies |
+| [`02-classical-ml`](02-classical-ml) | Linear regression, iris classification, heart-disease prediction, spam classification, credit-card fraud detection, live weather prediction |
+| [`03-neural-networks`](03-neural-networks) | MLPs in PyTorch and TensorFlow, fully connected networks, MNIST, small experiments such as learning primality |
+| [`04-computer-vision`](04-computer-vision) | CNNs on MNIST and Fashion-MNIST, autoencoders and transfer learning, U-Net segmentation on Carvana, ViT and ViViT |
+| [`05-generative-models`](05-generative-models) | Conditional GAN and Pix2Pix image-to-image translation |
+| [`06-transformers-nlp`](06-transformers-nlp) | Training a transformer, BERT and GPT |
+| [`07-reinforcement-learning`](07-reinforcement-learning) | Q-learning, DQN and A2C on CartPole, and an A2C agent for adaptive recommendations |
+| [`assignments`](assignments) | Graded work: KNN and SGD on census data, a decision tree from scratch, SVM classification, fully connected networks |
 
-While Deep Learning and GenAI handle unstructured data (text, images), classical Machine Learning remains the undisputed industry standard for tabular data, risk modeling, and structured prediction tasks.
+## Running them
 
-This repository serves as both an archive for foundational statistical projects and an active proving ground for advanced, production-level classical ML techniques.
+Open any notebook in Colab, or locally:
 
-## Archive & Core Implementations
+```bash
+uv venv && source .venv/bin/activate
+uv pip install jupyter numpy pandas matplotlib seaborn scikit-learn torch torchvision tensorflow
+jupyter lab
+```
 
-_(Moved from previous directories)_
-
-- Principal Component Analysis (PCA) and dimensionality reduction.
-- Support Vector Machines (SVM) and kernel tricks.
-- Random Forests and ensemble learning baselines.
-- Linear/Logistic Regression models built from first principles.
-
-## Future Roadmap: Production ML
-
-The next phase of this workspace focuses on shifting from "Jupyter Notebook experiments" to robust, automated, production-ready machine learning architectures.
-
-1. **Automated Hyperparameter Tuning:**
-   - Integrate `Optuna` frameworks into standard scikit-learn pipelines.
-   - Move away from grid search to Bayesian optimization for faster convergence.
-2. **Advanced Tree Methods:**
-   - Implement `XGBoost` and `LightGBM` models with custom, business-logic-driven loss functions (e.g., asymmetric penalty for false positives in fraud detection).
-3. **Model Interpretability (XAI):**
-   - Implement `SHAP` (SHapley Additive exPlanations) and `LIME` to reverse-engineer tree models and explicitly prove _why_ a model made a specific prediction.
-4. **Custom Sklearn Pipelines:**
-   - Write custom Python classes inheriting from `BaseEstimator` and `TransformerMixin` to encapsulate messy data cleaning steps (imputation, scaling, one-hot encoding) into a single, deployable `.pkl` pipeline object.
+The three small datasets the EDA and regression notebooks read (`insurance.csv`, `Diwali Sales Data.csv`, `placement.csv`) sit next to them. The rest download their data with `kagglehub` or the `torchvision`/`keras` loaders, or expect the file named in their first cells; the spam classifier needs `mails_data.csv`, which is too large to store here.
